@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScaleMaster Pro - Kalkulator Skala Denah</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Scale-master-transparent.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="Style/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ScaleMaster",
+        "description": "Kalkulator skala denah profesional gratis"
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg border-b border-blue-200 sticky top-0 z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">SM</span>
+            </div>
+            <span class="text-xl font-bold text-gray-800">ScaleMaster</span>
+          </a>
+
+          <!-- Desktop Navbar Menu  Items -->
+          <div class="hidden md:flex space-x-2">
+            <a
+              href="index.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Beranda</a
+            >
+            <a
+              href="calculator.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Kalkulator Skala</a
+            >
+            <a
+              href="aspect-ratio.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Rasio Aspek</a
+            >
+            <a
+              href="bar-scale.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Generator Skala Batang</a
+            >
+            <a
+              href="articles.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Artikel</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-500 transition-all duration-200"
+            id="mobileMenuButton"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="container mx-auto px-4 py-16">
+      <!-- Hero Section -->
+      <header class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-800 mb-6">
+          Kalkulator Skala Denah
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+          >
+            Profesional
+          </span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Alat lengkap untuk menghitung, mengkonversi, dan menganalisis skala
+          pada gambar denah arsitektur. Dilengkapi dengan preset skala standar
+          industri dan konversi satuan otomatis.
+        </p>
+
+        <nav
+          class="flex flex-col sm:flex-row gap-4 justify-center"
+          aria-label="Tindakan utama"
+        >
+          <a
+            href="calculator.html"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
+          >
+            Mulai Hitung Skala
+          </a>
+          <a
+            href="#features"
+            class="border border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-all duration-200"
+          >
+            Pelajari Fitur
+          </a>
+        </nav>
+      </header>
+
+      <!-- Features Section -->
+      <section id="features" class="mt-20" aria-labelledby="features-heading">
+        <h2 id="features-heading" class="sr-only">Fitur Utama ScaleMaster</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 1: Scale Calculator -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+          >
+            <header>
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-6 h-6 text-blue-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                Kalkulator Skala
+              </h3>
+            </header>
+            <p class="text-gray-600">
+              Hitung skala dari pengukuran sebenarnya dan pengukuran denah
+              dengan presisi tinggi untuk proyek arsitektur dan konstruksi.
+            </p>
+          </article>
+
+          <!-- Feature 2: Unit Conversion -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+          >
+            <header>
+              <div
+                class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-6 h-6 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                Konversi Satuan
+              </h3>
+            </header>
+            <p class="text-gray-600">
+              Konversi otomatis antara milimeter, centimeter, meter, dan
+              kilometer untuk kemudahan perhitungan dalam berbagai satuan.
+            </p>
+          </article>
+
+          <!-- Feature 3: Professional Presets -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+          >
+            <header>
+              <div
+                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+                aria-hidden="true"
+              >
+                <svg
+                  class="w-6 h-6 text-purple-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                Preset Profesional
+              </h3>
+            </header>
+            <p class="text-gray-600">
+              Akses cepat ke skala standar industri arsitektur, konstruksi, dan
+              perencanaan kota untuk efisiensi pekerjaan.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+      <div class="container mx-auto px-4 py-8">
+        <div class="text-center text-gray-600">
+          <p>&copy; 2025 ScaleMaster Pro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="Logic/utils.js"></script>
+    <script src="Data/scale-presets.js"></script>
+    <script src="Logic/app.js"></script>
+    <script src="Logic/scale-calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,300 @@
+/*=====  Custom styles Mobile Responsive ====== */
+
+* {
+  box-sizing: border-box;
+}
+
+.scale-preset,
+.aspect-preset {
+  transition: all 0.2s ease;
+}
+
+.scale-preset:hover,
+.aspect-preset:hover {
+  transform: translateY(-1px);
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+input,
+select {
+  transition: all 0.2s ease;
+}
+
+/* Mobile First Responsive Design */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Mobile Navigation Styles */
+#mobileMenu {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#mobileMenu a {
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+#mobileMenu a:hover {
+  border-left-color: #3b82f6;
+  background: linear-gradient(90deg, #eff6ff, transparent);
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+
+  .text-responsive {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .text-responsive-sm {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Touch-friendly buttons for mobile */
+@media (max-width: 768px) {
+  button,
+  .scale-preset,
+  .aspect-preset {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input,
+  select {
+    min-height: 44px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  /* Improved mobile grid layouts */
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-full {
+    width: 100% !important;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 767px) {
+  /* Stack calculator inputs vertically on mobile */
+  #scaleCalculator .grid-cols-1\\/md\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  #scaleCalculator .flex.justify-center {
+    display: none; /* Hide the colon separator on mobile */
+  }
+
+  /* Make cards full width on mobile */
+  .bg-white.rounded-xl {
+    margin: 0.5rem 0;
+  }
+
+  /* Improve padding for mobile */
+  .p-6 {
+    padding: 1rem;
+  }
+
+  /* Better spacing for mobile */
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Adjust button sizes for mobile */
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .px-8 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* Adjust grid for tablet */
+  .lg\\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lg\\:col-span-2 {
+    grid-column: span 2;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-right-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Utility classes for responsive design */
+.mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-hidden {
+    display: block;
+  }
+
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Navigation Enhancements */
+#mobileMenu {
+  transform: translateY(-100%);
+}
+
+#mobileMenu.translate-y-0 {
+  transform: translateY(0);
+}
+
+#mobileMenu.-translate-y-full {
+  transform: translateY(-100%);
+}
+
+#mobileMenuBackdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#mobileMenuBackdrop.opacity-100 {
+  opacity: 1;
+}
+
+#mobileMenuBackdrop.opacity-0 {
+  opacity: 0;
+}
+
+/* Smooth transitions for mobile menu */
+#mobileMenu {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile menu item animations */
+#mobileMenu a {
+  transition: all 0.2s ease;
+}
+
+#mobileMenu a:hover {
+  transform: translateX(8px);
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Mobile menu button animation */
+#mobileMenuButton {
+  transition: all 0.3s ease;
+}
+
+#mobileMenuButton:hover {
+  transform: scale(1.1);
+}
+
+/* Active state for mobile menu button */
+#mobileMenuButton.active {
+  background-color: #3b82f6;
+  color: white;
+}

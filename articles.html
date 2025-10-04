@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artikel & Tutorial - ScaleMaster Pro</title>
+    <link
+      rel="shortcut icon"
+      href="Assets/Scale-master-transparent.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Style/style.css" />
+  </head>
+
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg border-b border-blue-200 sticky top-0 z-40">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-2">
+            <div
+              class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">SM</span>
+            </div>
+            <span class="text-xl font-bold text-gray-800">ScaleMaster</span>
+          </a>
+
+          <!-- Desktop Navbar Menu  Items -->
+          <div class="hidden md:flex space-x-2">
+            <a
+              href="index.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Beranda</a
+            >
+            <a
+              href="calculator.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Kalkulator Skala</a
+            >
+            <a
+              href="aspect-ratio.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Rasio Aspek</a
+            >
+            <a
+              href="bar-scale.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Generator Skala Batang</a
+            >
+            <a
+              href="articles.html"
+              class="px-4 py-2 rounded-lg text-gray-600 hover:text-blue-500 hover:bg-blue-50 font-medium transition-all duration-200"
+              >Artikel</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-500 transition-all duration-200"
+            id="mobileMenuButton"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container mx-auto px-4 py-8">
+      <!-- Page Header -->
+      <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Artikel & Tutorial
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Panduan lengkap tentang skala, rasio aspek, dan teknik pengukuran
+          profesional
+        </p>
+      </header>
+
+      <!-- Articles Section -->
+      <section class="max-w-4xl mx-auto" aria-labelledby="articles-heading">
+        <h2 id="articles-heading" class="sr-only">
+          Daftar Artikel dan Tutorial
+        </h2>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Article 1: Architecture Scale -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <header>
+              <figure
+                class="w-full h-48 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg mb-4 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <span class="text-white text-xl font-bold">📐</span>
+              </figure>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                itemprop="headline"
+              >
+                Memahami Skala dalam Arsitektur
+              </h3>
+            </header>
+            <div itemprop="description">
+              <p class="text-gray-600 mb-4">
+                Panduan komprehensif tentang penggunaan skala dalam gambar
+                arsitektur dan teknik pembacaan yang tepat.
+              </p>
+            </div>
+            <footer class="flex items-center text-sm text-gray-500">
+              <time datetime="PT5M" itemprop="timeRequired">5 menit baca</time>
+              <span class="mx-2" aria-hidden="true">•</span>
+              <span itemprop="difficulty">Pemula</span>
+            </footer>
+          </article>
+
+          <!-- Article 2: Unit Conversion -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <header>
+              <figure
+                class="w-full h-48 bg-gradient-to-r from-green-400 to-green-600 rounded-lg mb-4 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <span class="text-white text-xl font-bold">📏</span>
+              </figure>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                itemprop="headline"
+              >
+                Teknik Konversi Satuan yang Akurat
+              </h3>
+            </header>
+            <div itemprop="description">
+              <p class="text-gray-600 mb-4">
+                Pelajari metode konversi satuan yang presisi dari mm hingga km
+                untuk perhitungan skala yang tepat.
+              </p>
+            </div>
+            <footer class="flex items-center text-sm text-gray-500">
+              <time datetime="PT7M" itemprop="timeRequired">7 menit baca</time>
+              <span class="mx-2" aria-hidden="true">•</span>
+              <span itemprop="difficulty">Menengah</span>
+            </footer>
+          </article>
+
+          <!-- Article 3: Aspect Ratio -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <header>
+              <figure
+                class="w-full h-48 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg mb-4 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <span class="text-white text-xl font-bold">🎯</span>
+              </figure>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                itemprop="headline"
+              >
+                Rasio Aspek untuk Desain Responsif
+              </h3>
+            </header>
+            <div itemprop="description">
+              <p class="text-gray-600 mb-4">
+                Memahami rasio aspek dalam desain web dan mobile untuk
+                pengalaman pengguna yang optimal.
+              </p>
+            </div>
+            <footer class="flex items-center text-sm text-gray-500">
+              <time datetime="PT6M" itemprop="timeRequired">6 menit baca</time>
+              <span class="mx-2" aria-hidden="true">•</span>
+              <span itemprop="difficulty">Semua Level</span>
+            </footer>
+          </article>
+
+          <!-- Article 4: Bar Scale -->
+          <article
+            class="bg-white rounded-xl shadow-lg p-6 border border-blue-100 hover:shadow-xl transition-shadow"
+            itemscope
+            itemtype="https://schema.org/Article"
+          >
+            <header>
+              <figure
+                class="w-full h-48 bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg mb-4 flex items-center justify-center"
+                aria-hidden="true"
+              >
+                <span class="text-white text-xl font-bold">🗺️</span>
+              </figure>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3"
+                itemprop="headline"
+              >
+                Membuat Skala Batang Profesional
+              </h3>
+            </header>
+            <div itemprop="description">
+              <p class="text-gray-600 mb-4">
+                Tutorial membuat skala batang yang akurat untuk peta dan denah
+                teknikal dengan tools digital.
+              </p>
+            </div>
+            <footer class="flex items-center text-sm text-gray-500">
+              <time datetime="PT8M" itemprop="timeRequired">8 menit baca</time>
+              <span class="mx-2" aria-hidden="true">•</span>
+              <span itemprop="difficulty">Lanjutan</span>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+      <div class="container mx-auto px-4 py-8">
+        <div class="text-center text-gray-600">
+          <p>&copy; 2025 ScaleMaster Pro. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="Logic/utils.js"></script>
+    <script src="Data/scale-presets.js"></script>
+    <script src="Logic/app.js"></script>
+    <script src="Logic/scale-calculator.js"></script>
+  </body>
+</html>
